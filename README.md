@@ -8,6 +8,16 @@ The main goal was to understand **where sales are coming from, which areas are p
 
 ---
 
+## 📸 Dashboard Preview
+
+### Sales Overview
+![Sales Overview](sales_Page1.png)
+
+### Profitability Analysis
+![Profitability Analysis](Profitability_Page2.png)
+
+---
+
 ## 🎯 Business Context
 
 The business had a large amount of sales data covering customers, products, categories, cities, regions, sales, profit, discounts, and dates.
