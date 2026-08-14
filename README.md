@@ -10,12 +10,13 @@ The main goal was to understand **where sales are coming from, which areas are p
 
 ## 📸 Dashboard Preview
 
-### Sales Overview
-![Sales Overview](sales_Page1.png)
+### Page 1 — Sales Overview
 
-### Profitability Analysis
-![Profitability Analysis](Profitability_Page2.png)
+![Sales Overview](sales_page1.png)
 
+### Page 2 — Profitability Analysis
+
+![Profitability Analysis](profitability_page2.png)
 ---
 
 ## 🎯 Business Context
