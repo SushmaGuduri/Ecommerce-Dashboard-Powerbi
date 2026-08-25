@@ -1,135 +1,83 @@
 # E-Commerce Sales & Profitability Analysis | Power BI
 
-## 📌 Project Overview
+## Project Overview
 
-This project is a Power BI dashboard built to analyze an e-commerce business's sales and profitability performance.
+This project is a Power BI dashboard analyzing an e-commerce business's sales and profitability performance across customer segments, regions, cities, products, and discount trends. The business had rich sales data but no clear view into whether high sales were actually translating into profit — this dashboard was built to answer that question.
 
-The main goal was to understand **where sales are coming from, which areas are performing well, and where the business may have profitability problems**.
-
----
-
-## 📸 Dashboard Preview
-
-### Page 1 — Sales Overview
-
-![Sales Overview](sales_page1.png)
-
-### Page 2 — Profitability Analysis
-
-![Profitability Analysis](profitability_page2.png)
----
-
-## 🎯 Business Context
-
-The business had a large amount of sales data covering customers, products, categories, cities, regions, sales, profit, discounts, and dates.
-
-Looking at sales alone was not enough to understand the overall business performance. I wanted to find out which areas were generating revenue and whether those sales were actually turning into profit.
-
----
-
-## 🎯 Project Objective
-
-My goal was to build an interactive Power BI dashboard that could help answer questions such as:
-
+**Goal:** build an interactive dashboard that could answer:
 - Which customer segment generates the most sales?
 - Which months and regions perform best?
-- Which cities generate the most sales and profit?
+- Which cities generate the most sales *and* profit?
 - Which products are profitable or loss-making?
 - Is there a relationship between discounts and profitability?
 - Where should the business focus its attention?
 
 ---
 
-## 🔨 My Approach
-
-I used Power BI to:
-
-- Prepare and explore the data
-- Create KPIs for Sales, Profit, Orders, Quantity, and Average Order Value
-- Analyze sales by customer segment
-- Analyze monthly and yearly trends
-- Compare sales and profit across cities and regions
-- Analyze profit margins by product sub-category
-- Compare discounts with profit margins
-- Create an interactive two-page dashboard using DAX measures and Power BI visuals
-
----
-
-## 📊 Key Results & Insights
-
-The analysis produced several useful business insights:
-
-- The **Consumer segment** generated the highest sales at approximately **$1.16M**.
-- **West** was the strongest region, with approximately **$725K in sales and a 14.94% profit margin**.
-- **New York City** generated the highest sales and profit among the top five cities, with approximately **$256K in sales and $62K profit**.
-- **Philadelphia** generated approximately **$109K in sales but recorded a loss of $13.84K**, making it an area that needs further investigation.
-- **Tables** generated approximately **$207K in sales but had a -8.56% profit margin**.
-- Within Furniture, higher discounts were associated with weaker profit margins. Tables had a **26.13% average discount and -8.56% profit margin**.
-- **Labels, Paper, and Envelopes** showed strong profit margins, with Labels reaching approximately **44.42%**.
-
----
-
-## 💡 Business Impact
-
-The dashboard shows that **high sales do not always mean high profitability**.
-
-The analysis can help management:
-
-- Identify strong-performing regions and cities
-- Investigate loss-making markets such as Philadelphia
-- Review products with negative profit margins
-- Reconsider heavy discounting in low-margin products
-- Understand which customer segments contribute most to revenue
-- Focus on **profitable growth instead of sales growth alone**
-
-The relationship between discount and profit margin is an area for further investigation. The dashboard shows an association, but it does not prove that discounts alone caused the losses.
-
----
-
-## 📊 Dashboard Pages
+## Dashboard
 
 ### Page 1 — Sales Overview
+[![Sales Overview](https://github.com/SushmaGuduri/Ecommerce-Dashboard-Powerbi/raw/main/sales_page1.png)](/SushmaGuduri/Ecommerce-Dashboard-Powerbi/blob/main/sales_page1.png)
 
-Focuses on:
-
-- Total Sales
-- Total Orders
-- Average Order Value
-- Total Quantity
-- Sales by Segment
-- Monthly Sales Trend
-- Top 5 Cities by Sales & Profit
-- Sales by Sub-Category
-- Average Discount by Category
+Covers: Total Sales, Total Orders, Average Order Value, Total Quantity, Sales by Segment, Monthly Sales Trend, Top 5 Cities by Sales & Profit, Sales by Sub-Category, Average Discount by Category.
 
 ### Page 2 — Profitability Analysis
+[![Profitability Analysis](https://github.com/SushmaGuduri/Ecommerce-Dashboard-Powerbi/raw/main/profitability_page2.png)](/SushmaGuduri/Ecommerce-Dashboard-Powerbi/blob/main/profitability_page2.png)
 
-Focuses on:
-
-- Total Profit
-- Profit Margin
-- Profit per Order
-- Sales & Profit Margin by Region
-- Sales & Profit by Year
-- Profit Margin by Sub-Category
-- Discount vs Profit Margin
-- Monthly Profit & Profit Margin
+Covers: Total Profit, Profit Margin, Profit per Order, Sales & Profit Margin by Region, Sales & Profit by Year, Profit Margin by Sub-Category, Discount vs Profit Margin, Monthly Profit & Profit Margin.
 
 ---
 
-## 🛠️ Tools Used
+## Approach
 
-- Power BI
-- DAX
+Using Power BI, I:
+- Prepared and explored the raw sales data
+- Built KPIs for Sales, Profit, Orders, Quantity, and Average Order Value
+- Analyzed sales by customer segment, region, city, and sub-category
+- Compared discount levels against profit margins to test for a relationship
+- Built the data model and DAX measures below to power both dashboard pages
+
+**Data model & key measures:**
+> _Add 2-3 specifics here, e.g.: "Built a star schema with a central Sales fact table joined to Date, Product, and Customer dimension tables. Key DAX measures included Profit Margin % = DIVIDE([Total Profit],[Total Sales]) and a time-intelligence measure for month-over-month sales growth."_
+>
+> Replace this with what you actually built — even 2-3 named measures signals real DAX fluency to anyone reviewing the repo.
 
 ---
 
-## 🎯 Key Takeaway
+## Key Results & Insights
 
-This project helped me understand that a good dashboard is not just about displaying numbers.
+- The **Consumer segment** generated the highest sales at approximately **$1.16M**.
+- **West** was the strongest region, with approximately **$725K in sales** and a **14.94% profit margin**.
+- **New York City** led the top five cities on both sales and profit — **$256K in sales, $62K profit**.
+- **Philadelphia** generated **$109K in sales but recorded a $13.84K loss** — flagged as a market needing investigation.
+- **Tables** generated **$207K in sales** but carried a **-8.56% profit margin**.
+- Within Furniture, higher discounts tracked with weaker margins — Tables carried a **26.13% average discount** alongside that -8.56% margin.
+- **Labels, Paper, and Envelopes** were the strongest-margin categories, with Labels reaching **~44.42%**.
 
-The goal is to turn data into a clear business story:
+---
 
-**Data → Analysis → Insight → Business Impact**
+## Business Impact
 
-The biggest takeaway from this project was that **increasing sales alone is not enough. The business also needs to understand whether those sales are generating healthy profit.**
+The core finding: **high sales do not always mean high profitability.**
+
+This supports:
+- Identifying strong-performing regions and cities to double down on
+- Investigating loss-making markets like Philadelphia
+- Reviewing negative-margin products
+- Reconsidering heavy discounting in low-margin categories
+- Prioritizing **profitable growth over sales growth alone**
+
+The discount-margin relationship shown here is an association, not proof of causation — a natural next step would be a controlled test isolating discount impact from other variables.
+
+---
+
+## Tools Used
+Power BI · DAX
+
+---
+
+## Key Takeaway
+
+A good dashboard isn't just about displaying numbers — it's about turning data into a decision-ready story: **Data → Analysis → Insight → Business Impact.**
+
+The biggest lesson from this project: increasing sales alone isn't enough. The business also needs to know whether those sales are generating healthy profit.
