@@ -38,10 +38,32 @@ Using Power BI, I:
 - Built the data model and DAX measures below to power both dashboard pages
 
 **Data model & key measures:**
-> _Add 2-3 specifics here, e.g.: "Built a star schema with a central Sales fact table joined to Date, Product, and Customer dimension tables. Key DAX measures included Profit Margin % = DIVIDE([Total Profit],[Total Sales]) and a time-intelligence measure for month-over-month sales growth."_
->
-> Replace this with what you actually built — even 2-3 named measures signals real DAX fluency to anyone reviewing the repo.
 
+Built a star schema with a dedicated `DateTable` on the "one" side and the `Superstore` sales table on the "many" side, joined on date, to support proper time-intelligence calculations.
+
+Key DAX measures:
+
+```dax
+Total Sales = SUM(Superstore[Sales])
+Total Profit = SUM(Superstore[Profit])
+
+Previous Year Sales = 
+CALCULATE(
+    [Total Sales],
+    SAMEPERIODLASTYEAR(DateTable[Date])
+)
+
+Profit Margin% = DIVIDE([Total Profit], [Total Sales], 0)
+
+Sales YoY % = 
+DIVIDE(
+    [Total Sales] - [Previous Year Sales],
+    [Previous Year Sales],
+    0
+)
+```
+
+`Profit Margin%` and `Sales YoY %` power the profitability and trend visuals across both dashboard pages; the dedicated date table enables the `SAMEPERIODLASTYEAR` time-intelligence pattern used in the year-over-year comparisons.
 ---
 
 ## Key Results & Insights
